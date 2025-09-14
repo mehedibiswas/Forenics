@@ -9,3 +9,6 @@ ACK = 0x10
 URG = 0x20
 ECE = 0x40
 CWR = 0x80
+
+### tcp.flags == 0x012
+#### Combine  SYN and ACK which is used for port scan identify.
