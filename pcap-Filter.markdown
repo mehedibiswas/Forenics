@@ -12,3 +12,8 @@ CWR = 0x80
 
 ### 2. tcp.flags == 0x012
 #### Combine  SYN and ACK which is used for port scan identify.
+
+
+
+### 3. List all the unique user-agent 
+tshark -r version.pcapng -Y "http.request" -T fields -e http.user_agent | sort -u
