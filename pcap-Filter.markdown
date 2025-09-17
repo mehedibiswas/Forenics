@@ -27,3 +27,11 @@ udp.dstport in {55 .. 70}
 
 ### List all the unique user-agent 
 tshark -r version.pcapng -Y "http.request" -T fields -e http.user_agent | sort -u
+
+### show only the ARP request
+arp.opcode == 1
+### Show only ARP requests from the suspected attacker (192.168.1.9)
+arp.opcode == 1 && arp.src.proto_ipv4 == 192.168.1.9
+### Show only ARP replies from (192.168.1.9)
+arp.opcode == 2 && arp.dst.proto_ipv4 == 192.168.1.9
+
