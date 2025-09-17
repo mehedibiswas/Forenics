@@ -20,8 +20,9 @@ tcp.flags.syn==1 and tcp.flags.ack==0 and tcp.window_size > 1024
 #### why the above command useful:
  -> Only detect initial connect ( 1st step of  3-ways handshake)
  -> Larger window size which is abnormal means attack or scan
- 
 
+### Open port in destination in range
+udp.dstport in {55 .. 70} 
 
 
 ### List all the unique user-agent 
